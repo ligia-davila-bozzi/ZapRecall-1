@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import FlashCardsPage from "./FlashCardsPage";
 
 export default function HomePage() {
   let [visible, setVisible] = React.useState(true);
@@ -17,6 +18,6 @@ export default function HomePage() {
       </button>
     </div>
   ) : (
-    <></>
+    <FlashCardsPage />
   );
 }
