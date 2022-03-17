@@ -1,0 +1,58 @@
+body {
+  font-family: "Recursive";
+  background-color: #fb6b6b;
+}
+
+.root {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: display 2s;
+}
+
+.home img {
+  width: 55px;
+  height: 65px;
+  margin-bottom: 10px;
+}
+
+.home h1 {
+  font-family: "Righteous";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-bottom: 83px;
+}
+
+.home button {
+  width: 141px;
+  height: 31px;
+
+  background: #ffffff;
+  border: 1px solid #d70900;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-family: "Recursive";
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #d70900;
+}
+
+.hidden {
+  display: none;
+}
