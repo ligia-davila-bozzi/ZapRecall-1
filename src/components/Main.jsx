@@ -1,6 +1,10 @@
 import Question from "./Question.jsx";
 
 export default function Main() {
+  function comparador() {
+    return Math.random() - 0.5;
+  }
+
   const questions = [
     {
       questionContent: "O que é JSX?",
@@ -36,6 +40,8 @@ export default function Main() {
         "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente",
     },
   ];
+
+  questions.sort(comparador);
 
   return (
     <main>

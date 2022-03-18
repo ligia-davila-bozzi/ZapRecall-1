@@ -5,7 +5,7 @@ export default function FlashCard(props) {
   let [question, setQuestion] = React.useState(true);
 
   return question === true ? (
-    <section>
+    <section className="flashCard">
       <p className="flashContent">{props.questionContent}</p>
       <img
         src={setinha}
@@ -16,11 +16,13 @@ export default function FlashCard(props) {
       />
     </section>
   ) : (
-    <section>
+    <section className="flashCard">
       <p className="flashContent">{props.answer}</p>
-      <button className="btn-wrong">Não lembrei!</button>
-      <button className="btn-almostRight">Quase não lembrei</button>
-      <button className="btn-Right">Zap!</button>
+      <div className="btns">
+        <button className="btn-wrong">Não lembrei</button>
+        <button className="btn-almostRight">Quase não lembrei</button>
+        <button className="btn-Right">Zap!</button>
+      </div>
     </section>
   );
 }
