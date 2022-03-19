@@ -1,9 +1,8 @@
 import reactDom from "react-dom";
 import HomePage from "./components/HomePage";
-import FlashCardsPage from "./components/FlashCardsPage";
 
 function App() {
-  return <FlashCardsPage />;
+  return <HomePage />;
 }
 
 const zapRecall = App();

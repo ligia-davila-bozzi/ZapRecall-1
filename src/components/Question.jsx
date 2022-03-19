@@ -2,13 +2,14 @@ import React from "react";
 import FlashCard from "./FlashCard";
 
 export default function Question(props) {
+  const { number, questionContent, answer, callback } = props;
   let [showFlashCard, setShowFlashCard] = React.useState(false);
   let [result, setResult] = React.useState("notAnswered");
   function answerCard(result) {
     setResult(result);
+    callback(result);
   }
 
-  const { number, questionContent, answer } = props;
   if (result === "notAnswered") {
     return showFlashCard === false ? (
       <section>
