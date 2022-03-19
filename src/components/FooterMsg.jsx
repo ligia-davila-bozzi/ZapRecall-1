@@ -3,7 +3,14 @@ import sadEmoji from "../assets/sad.png";
 import React from "react";
 
 export default function FooterMsg(props) {
-  const { answersNumber, questionsNumber, answers, setFooterHeight } = props;
+  const {
+    answersNumber,
+    questionsNumber,
+    answers,
+    setFooterHeight,
+    restartRecall,
+    setIconMargin,
+  } = props;
 
   let emoji = partyEmoji;
   let mainMsg = "PARABÉNS!";
@@ -20,6 +27,7 @@ export default function FooterMsg(props) {
   React.useEffect(() => {
     if (answersNumber === questionsNumber) {
       setFooterHeight();
+      setIconMargin("answersIcons recallFinished");
     }
   });
 
@@ -33,6 +41,14 @@ export default function FooterMsg(props) {
       <p>
         {answersNumber}/{questionsNumber} CONCLUÍDOS
       </p>
+      <button
+        className="btn-restartRecall"
+        onClick={() => {
+          restartRecall();
+        }}
+      >
+        REINICIAR RECALL
+      </button>
     </>
   ) : (
     <p>

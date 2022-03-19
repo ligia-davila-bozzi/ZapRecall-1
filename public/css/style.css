@@ -194,7 +194,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 50px;
+  height: 60px;
   background: white;
   width: 100%;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
@@ -238,13 +238,38 @@ footer p {
   font-family: "Recursive";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 22px;
+  text-align: center;
+  color: #333333;
+}
+
+.footer-mainMsg p {
+  font-size: 18px;
 }
 
 .answersIcons ion-icon {
   margin-top: 5px;
-  font-size: 23px;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.btn-restartRecall {
+  position: absolute;
+  width: 167px;
+  height: 32px;
+
+  background: #fb6b6b;
+  border-radius: 5px;
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  border: none;
+  bottom: 5px;
+  left: calc (50vw - 167/2px);
 }
 
 @media (min-width: 378px) {
@@ -289,4 +314,18 @@ footer p {
   .flashCard .btns button {
     font-size: 10px;
   }
+
+  .footer-mainMsg p,
+  footer p {
+    font-size: 18px;
+  }
+
+  .answersIcons ion-icon {
+    font-size: 23px;
+    margin-bottom: 0px;
+  }
+}
+
+.recallFinished {
+  margin-bottom: 15px;
 }

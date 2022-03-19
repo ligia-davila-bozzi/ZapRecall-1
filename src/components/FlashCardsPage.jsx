@@ -3,7 +3,8 @@ import Main from "./Main";
 import Footer from "./Footer";
 import React from "react";
 
-export default function FlashCardsPage() {
+export default function FlashCardsPage(props) {
+  const { restartRecall } = props;
   const questions = [
     {
       questionContent: "O que é JSX?",
@@ -54,12 +55,17 @@ export default function FlashCardsPage() {
   return (
     <>
       <Header />
-      <Main addAnswer={addAnswer} questions={questions} />
+      <Main
+        addAnswer={addAnswer}
+        questions={questions}
+        restartRecall={restartRecall}
+      />
       <Footer
         setFooterHeight={changeFooterHeight}
         footerHeight={footerHeight}
         answers={answers}
         questionsNumber={questions.length}
+        restartRecall={restartRecall}
       />
     </>
   );

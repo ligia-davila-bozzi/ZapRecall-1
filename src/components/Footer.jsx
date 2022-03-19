@@ -2,8 +2,15 @@ import FooterMsg from "./FooterMsg";
 import React from "react";
 
 export default function Footer(props) {
-  const { answers, questionsNumber, footerHeight, setFooterHeight } = props;
+  const {
+    answers,
+    questionsNumber,
+    footerHeight,
+    setFooterHeight,
+    restartRecall,
+  } = props;
   let keyCont = 0;
+  const [iconMargin, setIconMargin] = React.useState("answersIcons");
 
   return (
     <footer className={footerHeight}>
@@ -12,8 +19,10 @@ export default function Footer(props) {
         answersNumber={answers.length}
         questionsNumber={questionsNumber}
         setFooterHeight={setFooterHeight}
+        restartRecall={restartRecall}
+        setIconMargin={setIconMargin}
       />
-      <div className="answersIcons">
+      <div className={iconMargin}>
         {answers.map((answer) => {
           keyCont++;
           let ionName = "";

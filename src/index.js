@@ -1,5 +1,6 @@
 import reactDom from "react-dom";
 import HomePage from "./components/HomePage";
+import React from "react";
 
 function App() {
   return <HomePage />;
