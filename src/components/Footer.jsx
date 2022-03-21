@@ -8,6 +8,7 @@ export default function Footer(props) {
     footerHeight,
     setFooterHeight,
     restartRecall,
+    goal,
   } = props;
   let keyCont = 0;
   const [iconMargin, setIconMargin] = React.useState("answersIcons");
@@ -21,6 +22,7 @@ export default function Footer(props) {
         setFooterHeight={setFooterHeight}
         restartRecall={restartRecall}
         setIconMargin={setIconMargin}
+        goal={goal}
       />
       <div className={iconMargin}>
         {answers.map((answer) => {

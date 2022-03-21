@@ -10,19 +10,24 @@ export default function FooterMsg(props) {
     setFooterHeight,
     restartRecall,
     setIconMargin,
+    goal,
   } = props;
 
   let emoji = partyEmoji;
   let mainMsg = "PARABÉNS!";
-  let msg = "Você não esqueceu de nenhum flashcard!";
+  let msg = `Você atingiu sua meta de ${goal} FlashCards!`;
 
-  answers.forEach((answer) => {
-    if (answer === "wrong") {
-      emoji = sadEmoji;
-      mainMsg = "PUTZ!";
-      msg = "Ainda faltaram alguns... \n Mas não desanime!";
+  let rightAnswers = [];
+  for (let i = 0; i < answers.length; i++) {
+    if (answers[i] === "right" || answers[i] === "almost") {
+      rightAnswers.push(answers[i]);
     }
-  });
+  }
+  if (rightAnswers.length < goal) {
+    emoji = sadEmoji;
+    mainMsg = "PUTZ!";
+    msg = "Ainda faltaram alguns... \n Mas não desanime!";
+  }
 
   React.useEffect(() => {
     if (answersNumber === questionsNumber) {

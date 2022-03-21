@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import React from "react";
 
 export default function FlashCardsPage(props) {
-  const { restartRecall } = props;
+  const { restartRecall, goal } = props;
   const questions = [
     {
       questionContent: "O que é JSX?",
@@ -66,6 +66,7 @@ export default function FlashCardsPage(props) {
         answers={answers}
         questionsNumber={questions.length}
         restartRecall={restartRecall}
+        goal={goal}
       />
     </>
   );
