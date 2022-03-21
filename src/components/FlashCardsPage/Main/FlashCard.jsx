@@ -1,5 +1,5 @@
 import React from "react";
-import setinha from "../assets/setinha.png";
+import setinha from "../../../assets/setinha.png";
 
 export default function FlashCard(props) {
   let [question, setQuestion] = React.useState(true);

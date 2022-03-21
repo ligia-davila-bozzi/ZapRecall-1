@@ -1,5 +1,5 @@
-import partyEmoji from "../assets/party.png";
-import sadEmoji from "../assets/sad.png";
+import partyEmoji from "../../../assets/party.png";
+import sadEmoji from "../../../assets/sad.png";
 import React from "react";
 
 export default function FooterMsg(props) {
