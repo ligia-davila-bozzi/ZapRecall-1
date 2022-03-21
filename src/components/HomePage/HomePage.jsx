@@ -33,8 +33,7 @@ export default function HomePage() {
 
   function getSelectedDeck(event) {
     let value = JSON.parse(event.target.value);
-    value = value.sort(comparator());
-    console.log(value);
+    value = value.sort(comparator);
     setDeckQuestions(value);
   }
 
