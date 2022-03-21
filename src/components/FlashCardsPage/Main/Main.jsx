@@ -3,11 +3,6 @@ import Question from "./Question.jsx";
 export default function Main(props) {
   const { addAnswer, questions } = props;
 
-  function comparador() {
-    return Math.random() - 0.5;
-  }
-  questions.sort(comparador);
-
   return (
     <main>
       {questions.map((question) => (

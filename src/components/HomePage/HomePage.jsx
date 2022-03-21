@@ -10,7 +10,9 @@ export default function HomePage() {
 
   const [goal, setGoal] = React.useState(0);
 
-  const [deckQuestions, setDeckQuestions] = React.useState(decks[0].questions);
+  const [deckQuestions, setDeckQuestions] = React.useState(
+    decks[0].questions.sort(comparator)
+  );
 
   function restartRecall() {
     setRestart(true);
@@ -25,8 +27,14 @@ export default function HomePage() {
     }
   }
 
+  function comparator() {
+    return Math.random() - 0.5;
+  }
+
   function getSelectedDeck(event) {
-    const value = JSON.parse(event.target.value);
+    let value = JSON.parse(event.target.value);
+    value = value.sort(comparator());
+    console.log(value);
     setDeckQuestions(value);
   }
 
